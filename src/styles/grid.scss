@@ -1,0 +1,64 @@
+.card-1 {
+  grid-area: a;
+}
+.card-2 {
+  grid-area: b;
+}
+.card-3 {
+  grid-area: c;
+}
+.card-4 {
+  grid-area: d;
+}
+.card-5 {
+  grid-area: e;
+}
+
+.product-container {
+  display: grid;
+  justify-content: space-between;
+  row-gap: 20px;
+  grid-template-areas:
+    "a a b b s s"
+    "a a c c s s";
+  grid-template-columns: repeat(6, 184px);
+  grid-template-rows: repeat(2, 154px);
+
+  @media (max-width: 1440px) {
+    grid-template-areas:
+      "a a s s"
+      "a a s s"
+      "b b c c";
+    grid-template-columns: repeat(4, 181px);
+    grid-template-rows: repeat(3, 154px);
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-areas:
+      "a a a a"
+      "b b b b"
+      "c c c c"
+      "s s s s";
+
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: 330px 225px 225px 330px;
+  }
+  @media (max-width: 768px) {
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c c"
+      "s s";
+    grid-template-columns: 350px;
+    grid-template-rows: 328px 225px 225px 410px;
+  }
+  @media (max-width: 578px) {
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c c"
+      "s s";
+    grid-template-columns: repeat(2, 146px);
+    grid-template-rows: 328px 175px 175px 320px;
+  }
+}

@@ -1,0 +1,116 @@
+.form {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  border-radius: 5px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 99;
+  @media (max-width: 578px) {
+    max-width: 328px;
+  }
+  .form__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    .form__title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .form__button-exit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.1s linear;
+      &:hover {
+        background-color: #d6d6d6;
+      }
+    }
+  }
+  .form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .form__input {
+      padding: 10px 12px;
+      margin-bottom: 24px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #e6e6e6;
+      font-size: 12px;
+      &:hover {
+        border: 1px solid #aaaaaa;
+      }
+      &:focus {
+        border: 1px solid #3d3d3d;
+      }
+      &--error {
+        border: 1px solid #f87474;
+      }
+    }
+    p {
+      position: absolute;
+      bottom: 8px;
+      left: 12px;
+      font-size: 12px;
+      color: #f87474;
+    }
+  }
+  .form__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 578px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form__checkbox-label {
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.85;
+      }
+      font-size: 12px;
+      .form__checkbox {
+        cursor: pointer;
+      }
+      p {
+        color: #f87474;
+        font-weight: 700;
+      }
+    }
+    .form__button {
+      padding: 6px 20px;
+      line-height: 20px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #18c576;
+      opacity: 0.5;
+      transition: all 0.1s linear;
+    }
+
+    .form__button--active {
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        background: darken($color: #18c576, $amount: 5);
+      }
+    }
+  }
+}

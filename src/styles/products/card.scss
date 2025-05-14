@@ -1,0 +1,217 @@
+.product__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 12px;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1;
+  .product__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.01));
+    }
+  }
+
+  .card__header {
+    display: flex;
+    justify-content: space-between;
+
+    .card__title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .card__controls {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .card__control {
+        display: block;
+        width: 24px;
+        height: 24px;
+        transition: all 0.1s ease-in;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .card__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+    .card__badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      gap: 4px;
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 43px;
+        left: 12px;
+        flex-direction: row;
+      }
+    }
+
+    .card__action {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+      }
+      .card__price {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .card__button {
+        padding: 6px 20px;
+        border-radius: 5px;
+        line-height: 20px;
+        background-color: #18c576;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.1s ease-in;
+        font-family: Inter;
+        @media (max-width: 768px) {
+          display: block;
+          width: 100%;
+        }
+        &:hover {
+          background-color: #19b66f;
+        }
+      }
+    }
+  }
+}
+
+// карточки слайдера
+.vertical {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 12px;
+  background-size: 100%;
+
+  .card__header {
+    padding: 10px;
+    height: 183px;
+    border-radius: 5px 5px 0 0;
+    .product__image {
+      height: 183px;
+      @media (max-width: 768px) {
+        height: 230px;
+      }
+
+      img {
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    @media (max-width: 768px) {
+      height: 230px;
+    }
+    .card__badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }
+
+  .card__content {
+    flex-grow: 1;
+    padding: 12px;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0 0 5px 5px;
+    align-items: center;
+
+    .card__title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 120%;
+      @media (max-width: 578px) {
+        padding-bottom: 15px;
+      }
+    }
+
+    .card__action {
+      width: 100%;
+      flex-direction: column;
+
+      .card__price {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        @media (max-width: 578px) {
+          padding: 10px;
+        }
+      }
+
+      .card__button {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// бэджи карточек
+.card__badge {
+  padding: 0 11px;
+  line-height: 23px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+
+  &--discount {
+    background: #18c576;
+  }
+  &--hit {
+    background: #ac59f1;
+  }
+  &--featured {
+    background: #ffa726;
+  }
+  &--sale {
+    background: #39b0f4;
+  }
+}
+
+.card__image {
+  position: absolute;
+}

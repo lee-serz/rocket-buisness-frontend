@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="stylesheet" href="./src/styles/reset.scss" />
+    <link rel="stylesheet" href="./src/styles/global.scss" />
+    <link rel="stylesheet" href="./src/styles/card.scss" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <main>
+        <!-- ВСПЛЫВАЮЩАЯ ФОРМА -->
+        <div id="overlay"></div>
+        <form action="#" method="POST" id="form" class="form">
+          <div class="form__header">
+            <h3 class="form__title">Оставьте заявку</h3>
+            <span class="form__button-exit">&times;</span>
+          </div>
+          <label for="name" class="form__field">
+            <input class="form__input" id="name" name="name" type="text" placeholder="Ваше имя *">
+          </label>
+          <label for="phone" class="form__field">
+            <input class="form__input" id="phone" name="phone" type="tel" placeholder="Номер телефона *" required>
+          </label>
+          <div class="form__actions">
+            <label for="privacy" class="form__checkbox-label">
+              <input class="form__checkbox" type="checkbox" name="privacy" id="privacy">
+              <span>Я соглашаюсь на <a href="#" target="_blank">обработку персональных данных</a></span>
+            </label>
+            <button type="submit" class="form__button">Отправить</button>
+          </div>
+        </form>
+    </div>
+    <!-- ВИДЕО ПЛЕЕР -->
+    <section class="video-player">
+      <div class="wrapper">
+        <div class="container">
+          <div class="video-container">
+            <div class="video-preview">
+              <button class="video-preview__button">Смотреть видео</button>
+            </div>
+            <div class="video-iframe">
+              <iframe src="about:blank" data-src="https://www.youtube.com/embed/jdguVU0F7fs?autoplay=1&mute=1" title="Pov - Relaxing Barista workflow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-iframe__element"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- СЕКЦИЯ С ПРОДУКТАМИ -->
+    <section class="product">
+      <div class="wrapper">
+        <div class="container">
+          <div class="product-container">
+            <div class="product__card card-1">
+              <div class="product__image">
+                <img src="/assets/images/product-1.jpg" alt="Название товара">
+              </div>
+              <div class="card__header">
+                <h3 class="card__title">Горох в стручках, 1 кг</h3>
+                <div class="card__controls">
+                  <a href="#" class="card__control"><img src="/assets/icons/like-icon.svg" /></a>
+                  <a href="#" class="card__control"><img src="/assets/icons/view-icon.svg" /></a>
+                </div>
+              </div>
+              <div class="card__content">
+                <div class="card__badges">
+                  <div class="card__badge card__badge--discount">-29%</div>
+                  <div class="card__badge card__badge--featured">
+                    Товар дня
+                  </div>
+                </div>
+                <div class="card__action">
+                  <p class="card__price">570 &#8381;</p>
+                  <button class="card__button button">
+                    Оставить заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__card card-2">
+              <div class="product__image">
+                <img src="/assets/images/product-2.jpg" alt="Название товара">
+              </div>
+              <div class="card__header">
+                <h3 class="card__title">Голубика лесная, 200 г</h3>
+                <div class="card__controls">
+                  <a href="#" class="card__control"><img src="/assets/icons/like-icon.svg" /></a>
+                  <a href="#" class="card__control"><img src="/assets/icons/view-icon.svg" /></a>
+                </div>
+              </div>
+              <div class="card__content">
+                <div class="card__badges">
+                  <div class="card__badge card__badge--discount">-31%</div>
+                  <div class="card__badge card__badge--sale">
+                    Распродажа
+                  </div>
+                </div>
+                <div class="card__action">
+                  <p class="card__price">140 &#8381;</p>
+                  <button class="card__button button">
+                    Оставить заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__card card-3">
+              <div class="product__image">
+                <img src="/assets/images/product-3.jpg" alt="Название товара">
+              </div>
+              <div class="card__header">
+                <h3 class="card__title">Морковь мытая, 1 кг</h3>
+                <div class="card__controls">
+                  <a href="#" class="card__control"><img src="/assets/icons/like-icon.svg" /></a>
+                  <a href="#" class="card__control"><img src="/assets/icons/view-icon.svg" /></a>
+                </div>
+              </div>
+              <div class="card__content">
+                <div class="card__badges">
+                  <div class="card__badge card__badge--hit">Хит</div>
+                </div>
+                <div class="card__action">
+                  <p class="card__price">140 &#8381;</p>
+                  <button class="card__button button">
+                    Оставить заявку
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- СЛАЙДЕР ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ -->
+            <div class="slider-container">
+              <div class="slider">
+                <div class="product__card vertical card-4">
+                  <div class="card__header">
+                    <div class="product__image">
+                      <img src="/assets/images/product-4.jpg" alt="Название товара">
+                    </div>
+                    <div class="card__badges">
+                      <div class="card__badge card__badge--discount">-31%</div>
+                      <div class="card__badge card__badge--featured">
+                        Товар дня
+                      </div>
+                    </div>
+                    <div class="card__controls">
+                      <a href="#" class="card__control"><img src="/assets/icons/like-icon.svg" /></a>
+                      <a href="#" class="card__control"><img src="/assets/icons/view-icon.svg" /></a>
+                    </div>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Попкорн солёный для СВЧ-печи, 120 г
+                    </h3>
+                    <div class="card__action">
+                      <p class="card__price">160 &#8381;</p>
+                      <button class="card__button button">
+                        Оставить заявку
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product__card vertical card-5">
+                  <div class="card__header">
+                    <div class="product__image">
+                      <img src="/assets/images/product-5.jpg" alt="Название товара">
+                    </div>
+                    <div class="card__badges">
+                      <div class="card__badge card__badge--hit">Хит</div>
+                    </div>
+                    <div class="card__controls">
+                      <a href="#" class="card__control"><img src="/assets/icons/like-icon.svg" /></a>
+                      <a href="#" class="card__control"><img src="/assets/icons/view-icon.svg" /></a>
+                    </div>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">Эскимо с малиной, 150 г</h3>
+                    <div class="card__action">
+                      <p class="card__price">190 &#8381;</p>
+                      <button class="card__button button">
+                        Оставить заявку
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__dots">
+                <div class="slider__dots-dot slider__dots-dot--active"></div>
+                <div class="slider__dots-dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+
+</html>
